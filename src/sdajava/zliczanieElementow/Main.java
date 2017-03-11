@@ -1,4 +1,5 @@
 package sdajava.zliczanieElementow;
+import java.util.Scanner;
 
 public class Main {
 
@@ -6,11 +7,14 @@ public class Main {
 
         int[] tab = {4, 1, 6, 1, 1, 7, 8};
         int wynik = 0;
-        int n = 0;
+
+        Scanner wejcie = new Scanner(System.in);
+        System.out.println("Podaj szukany element:");
+        int n = wejcie.nextInt();
 
 
         for (int i=0; i<tab.length; i++) {
-            if (n <= tab[i]){
+            if (n == tab[i]){
                 wynik++;
             }
         }
